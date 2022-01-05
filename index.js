@@ -12,10 +12,17 @@ const tutorials = [
 ];
 
 function titleCased(array) {
-  let updatedArray = []
-  updatedArray = array.map(titleCaseString())
-  return updatedArray;
+  let titleCasedArray = array.map(element => {
+    return Object.assign({}, titleCaseString(element))
+  });
+  return titleCasedArray;
 }
+
+// function titleCased(array) {
+//   let updatedArray = []
+//   updatedArray = map(titleCaseString(array))
+//   return updatedArray;
+// }
 
 function titleCaseString(string) {
   let titleCasedString = ""
